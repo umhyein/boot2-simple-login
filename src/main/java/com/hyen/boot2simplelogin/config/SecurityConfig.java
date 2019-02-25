@@ -30,11 +30,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception{
-        CharacterEncodingFilter filter = new CharacterEncodingFilter();
+//        CharacterEncodingFilter filter = new CharacterEncodingFilter();
 
         http
             .authorizeRequests()
-                .antMatchers("/", ".login/**", "/css/**", "/images/**", "/js/**", "/console/**", "").permitAll()
+                .antMatchers("/", "/login/**").permitAll()
                 .anyRequest().authenticated()
             .and()
                 .headers().frameOptions().disable()
