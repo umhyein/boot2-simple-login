@@ -1,8 +1,11 @@
 package com.hyen.boot2simplelogin.web.domain;
 
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
 public class User {
     private String id;
     private String password;
