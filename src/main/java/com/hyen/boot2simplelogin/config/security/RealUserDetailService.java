@@ -10,9 +10,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import java.util.Objects;
 
 /**
- * 유저가 로그인을 하게되면 UserDetailsService의 loadUserByUsername으로 유저를 조회해
- * AuthencationProvider로 리턴해주고
- * AuthencationProvider의 authenticate메소드에서 유저가 입력한 비번과 대조하게된다.
+ * 실제user 정보를 확인하고 실제user를 반환한다.
  */
 public class RealUserDetailService implements UserDetailsService {
 
